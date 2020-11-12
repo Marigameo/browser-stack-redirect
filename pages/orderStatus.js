@@ -7,7 +7,6 @@ export default function orderStatus () {
     useEffect(() => {
         window.addEventListener('popstate', function (event) {
             window.location.replace('/');
-            history.replaceState(null, null, '/');
         }, false);
     })
 
