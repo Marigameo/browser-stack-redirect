@@ -1,12 +1,14 @@
 import styles from '../styles/Home.module.css'
 import React, { useEffect } from 'react';
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 
 export default function orderStatus () {
+    const router = useRouter()
 
     useEffect(() => {
         window.addEventListener('popstate', function (event) {
-            window.location.replace('/');
+            window.history.replaceState(null, null, '/');
         }, false);
     })
 
